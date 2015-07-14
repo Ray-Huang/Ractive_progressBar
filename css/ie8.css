@@ -1,0 +1,15 @@
+/* global */
+h1 {font-size: 2.6em;}
+input[type='button'] {margin-left: 5px;}
+input[type='button'],
+select {font-size: 1.4em;}
+
+#overlay {background: transparent url(../img/bg-image-overlay.png) scroll repeat 0 0;}
+.popup {width: 416px;}
+
+/* progress bar */
+.progress-container {width: 300px;}
+.progress-value {font-size: 1.3em;}
+
+/* toolbar */
+.toolbar > div:first-child {width: auto;}

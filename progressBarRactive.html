@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Progress Bar</title>
+		<!-- meta -->
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="Cache-Control" content="no-transform" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+		<!-- styles -->
+		<link type="text/css" rel="stylesheet" href="css/global.css" media="screen, projection" />
+		<link type="text/css" rel="stylesheet" href="css/progressBar.css" media="screen, projection" />
+		
+		<!--[if IE 8]>
+		<link rel="stylesheet" type="text/css" href="css/ie8.css" />
+		<![endif]-->
+		
+		<!-- script -->
+		<script type="text/javascript" src="js/lib/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src='http://cdn.ractivejs.org/latest/ractive-legacy.min.js'></script>
+		<script type="text/javascript" src="js/progressBarRactive.js"></script>
+	</head>
+	<body>
+		<div id="content"></div>
+		<div id="overlay">
+			<div class="popup"></div>
+		</div>
+	</body>
+	
+	<script id="progress-bar" type='text/ractive'>
+		<div class="progress-container">
+			<div class="title">
+				<h1>Progress Bars Demo</h1>
+			</div>
+			{{#each progressBar}}
+			<div id="{{id}}" class="progress {{cls}}">
+				<div class="progress-value" data-value="{{value}}">{{value}}%</div>
+				<div class="icon" style="width: {{value}}%;"></div>
+			</div>
+			{{/each}}
+			<div class="toolbar">
+				<div>
+					<select value="{{selectedBar}}" on-change="switchProgressbar:{{selectedBar}}">
+					{{#each progressBar}}
+						<option value="{{id}}">{{text}}</option>
+					{{/each}}	
+					</select>
+				</div>
+				{{#each button}}
+				<div>
+					<input type="button" value="{{this}}" on-click="runProgress" >
+				</div>
+				{{/each}}
+			</div>
+		</div>
+	</script>
+	
+</html>
