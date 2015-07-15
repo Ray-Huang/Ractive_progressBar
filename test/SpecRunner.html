@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Progress Bar</title>
-		<!-- meta -->
-		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="Cache-Control" content="no-transform" />
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
-		<!-- styles -->
-		<link type="text/css" rel="stylesheet" href="css/global.css" media="screen, projection" />
-		<link type="text/css" rel="stylesheet" href="css/progressBar.css" media="screen, projection" />
-		
-		<!--[if IE 8]>
-		<link rel="stylesheet" type="text/css" href="css/ie8.css" />
-		<![endif]-->
-		
-		<!-- script -->
-		<script type="text/javascript" src="js/lib/jquery-1.11.3.min.js"></script>
+		<meta charset="utf-8">
+		<title>Jasmine Spec Runner v2.3.4</title>
+
+		<link rel="shortcut icon" type="image/png" href="lib/jasmine-2.3.4/jasmine_favicon.png">
+		<link rel="stylesheet" href="lib/jasmine-2.3.4/jasmine.css">
+
+		<script src="lib/jasmine-2.3.4/jasmine.js"></script>
+		<script src="lib/jasmine-2.3.4/jasmine-html.js"></script>
+		<script src="lib/jasmine-2.3.4/boot.js"></script>
+		<script src="../js/lib/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="http://cdn.ractivejs.org/latest/ractive-legacy.min.js"></script>
-		<script type="text/javascript" src="js/progressBarRactive.js"></script>
+
+		<!-- include source files here... -->
+		<script src="../js/progressBarRactive.js"></script>
+
+		<!-- include spec files here... -->
+		<script src="spec/progressBarRactive.js"></script>
+
 	</head>
+
 	<body>
 		<div id="content"></div>
-		<div id="overlay">
+		<div id="overlay" style="display: none;">
 			<div class="popup"></div>
 		</div>
 	</body>
-	
+
 	<script id="progress-bar" type='text/ractive'>
 		<div class="progress-container">
 			<div class="title">
@@ -53,5 +55,5 @@
 			</div>
 		</div>
 	</script>
-	
+
 </html>

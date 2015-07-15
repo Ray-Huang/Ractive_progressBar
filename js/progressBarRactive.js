@@ -3,9 +3,12 @@
  * author : Ray Huang
  * dependencies: jquery Ractive.js
  */
+
+var progressBar;//for unit testing
+
 (function($) {
 	$(function() {
-		var progressBar = new Ractive({
+			progressBar = new Ractive({
 			el : ".popup",
 			template : "#progress-bar",
 			data : {
